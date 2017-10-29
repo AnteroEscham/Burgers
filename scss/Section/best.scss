@@ -22,6 +22,7 @@
 
   &__item {
     text-align: center;
+    max-width: rem(299px);
     &-title {
       display: block;
       font-size: rem(24px);
