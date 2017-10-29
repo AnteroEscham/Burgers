@@ -6,6 +6,7 @@
   &__title {
     @extend .hero__title;
     color: $dark;
+    margin-top: 2%;
   }
 
   &__cards {
@@ -14,6 +15,7 @@
   }
 
   &__list {
+    margin-top: 2%;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
@@ -27,6 +29,7 @@
       display: block;
       font-size: rem(24px);
       font-family: Lifehack;
+      margin-top: rem(22px);
     }
     &-desc {
       font-size: rem(14px);
