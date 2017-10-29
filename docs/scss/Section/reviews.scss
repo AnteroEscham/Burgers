@@ -1,0 +1,54 @@
+.reviews {
+
+  &__list {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  &__item {
+    flex-basis: 25%;
+    height: 326px;
+    background: url('../img/content/guest-1.png') no-repeat;
+    background-size: 100%;
+    padding: rem(48px) rem(24px);
+    color: #fff;
+    font-size: rem(14px);
+
+
+    &:hover .reviews__content {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    opacity: 0;
+    transition: 0.7s;
+  }
+
+  &__name {
+    font-family: Gagalin;
+    font-weight: 500;
+
+  }
+
+  &__text {
+    line-height: 1.9;
+  }
+}
+
+.btn--reviews {
+  background-color: $dark;
+  &:hover {
+    background-color: lighten($dark, 7%);
+  }
+}
+
+@each $nmb-guest in 1, 2, 3, 4, 5, 6, 7, 8 {
+  .reviews__item--guest-#{$nmb-guest} {
+    background-image: url('../img/content/guest-#{$nmb-guest}.png');
+  }
+}
