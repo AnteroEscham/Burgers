@@ -3,10 +3,7 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  &__title {
-    @extend .hero__title;
-    color: $dark;
-  }
+  position: relative;
 
   &__cards {
     width: 100%;
@@ -23,14 +20,18 @@
   &__item {
     text-align: center;
     max-width: rem(299px);
-    &-title {
+    & span, h1, h2, h3, h4, h5, h6 {
       display: block;
       font-size: rem(24px);
       font-family: Lifehack;
     }
-    &-desc {
+    & p {
       font-size: rem(14px);
       line-height: 1.9;
     }
   }
+}
+
+.title--best {
+  color: $dark;
 }
