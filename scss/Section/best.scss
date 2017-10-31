@@ -20,12 +20,12 @@
   &__item {
     text-align: center;
     max-width: rem(299px);
-    &-title {
+    & span, h1, h2, h3, h4, h5, h6 {
       display: block;
       font-size: rem(24px);
       font-family: Lifehack;
     }
-    &-desc {
+    & p {
       font-size: rem(14px);
       line-height: 1.9;
     }

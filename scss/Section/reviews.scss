@@ -3,6 +3,7 @@
 
   &__list {
     width: 100%;
+    height: 100%;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -11,10 +12,10 @@
   }
 
   &__item {
-    flex-basis: 25%;
-    height: 326px;
+    width: 25%;
+    height: 50%;
     background: url('../img/content/guest-1.png') no-repeat;
-    background-size: 100%;
+    background-size: cover;
     padding: rem(48px) rem(24px);
     color: #fff;
     font-size: rem(14px);
