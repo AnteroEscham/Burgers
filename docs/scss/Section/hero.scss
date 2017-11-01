@@ -11,6 +11,7 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+  position: relative;
 }
 
 .hero__drops, .hero__text {
@@ -79,12 +80,7 @@
   padding-bottom: 10%;
 }
 
-.hero__title {
-  color: #f9b43b;
-  font-family: 'Gagalin';
-  font-size: 72px;
-  font-weight: 400;
-  line-height: 1.42;
+.title--hero {
   margin: 0;
   padding-top: 60px;
 }
