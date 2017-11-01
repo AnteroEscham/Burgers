@@ -1,9 +1,7 @@
 .reviews {
-  position: relative;
 
   &__list {
     width: 100%;
-    height: 100%;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -12,10 +10,10 @@
   }
 
   &__item {
-    width: 25%;
-    height: 50%;
+    flex-basis: 25%;
+    height: 326px;
     background: url('../img/content/guest-1.png') no-repeat;
-    background-size: cover;
+    background-size: 100%;
     padding: rem(48px) rem(24px);
     color: #fff;
     font-size: rem(14px);
