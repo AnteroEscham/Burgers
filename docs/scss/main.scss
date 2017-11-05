@@ -6,8 +6,12 @@
 
 // base
 @import "Layout/fonts";
+
+//media
+@import "Config/media";
 @import "Layout/base";
 @import "Layout/adjustment";
+
 
 //section
 @import "Section/hero";
@@ -15,3 +19,5 @@
 @import "Section/reviews";
 @import "Section/team";
 @import "Section/eat-menu";
+@import "Section/form";
+@import "Section/contacts";

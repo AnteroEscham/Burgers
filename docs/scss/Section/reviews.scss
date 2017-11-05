@@ -1,5 +1,6 @@
 .reviews {
   position: relative;
+  height: 1px;
 
   &__list {
     width: 100%;
@@ -16,7 +17,7 @@
     height: 50%;
     background: url('../img/content/guest-1.png') no-repeat;
     background-size: cover;
-    padding: rem(48px) rem(24px);
+    padding: rem(48px) rem(17px);
     color: #fff;
     font-size: rem(14px);
 

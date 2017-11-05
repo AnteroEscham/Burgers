@@ -32,6 +32,22 @@
   }
 }
 
+.best__item-svg {
+  width: rem(96px);
+  height: rem(96px);
+  &--meat {
+    fill: $meat;
+  }
+  &--hand {
+    fill: $hand;
+  }
+  &--natural {
+    fill: $natural;
+  }
+}
+
+
+
 .title--best {
   color: $dark;
 }
