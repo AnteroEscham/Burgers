@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: rem(10px);
 }
 
 .hero {
@@ -17,8 +17,17 @@
 .hero__drops, .hero__text {
   flex-basis: 50%;
   display: flex;
+  @include tablets {
+    flex-basis: 100%;
+    text-align: center;
+  }
 }
-
+.hero__drops-img {
+  @include tablets {
+    text-align: right;
+    display: inline-block;
+  }
+}
 .hero__text {
   flex-direction: column;
   justify-content: center;
@@ -27,7 +36,7 @@
 .hero__title-desc {
   color: #ffffff;
   font-family: 'Lifehack';
-  font-size: 65px;
+  font-size: rem(65px);
   font-weight: 500;
   line-height: 1;
 }
@@ -38,6 +47,9 @@
 
 .nav {
   margin-right: rem(15px);
+  @include tablets {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -58,7 +70,7 @@
 
 .nav__link {
   color: #ffffff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   line-height: 1.42;
   text-transform: uppercase;
@@ -82,5 +94,11 @@
 
 .title--hero {
   margin: 0;
-  padding-top: 60px;
+  padding-top: rem(60px);
+}
+
+.arrow-down-svg {
+  fill: #fff;
+  width: rem(30px);
+  height: rem(20px);
 }
