@@ -18,20 +18,33 @@
   background-color: black;
   width: 100%;
   padding: 10px;
+  @include phones {
+    text-align: center;
+  }
 }
 
 .container--footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .foter__left, .footer__right {
   width: 30%;
+  @include phones {
+    width: 100%;
+  }
 }
 
 .footer__right {
   text-align: right;
+  @include phones {
+    text-align: center;
+    margin-top: rem(15px);
+  }
 }
 
 .footer__address {

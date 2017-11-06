@@ -10,6 +10,10 @@
   margin-top: rem(100px);
   margin-left: rem(90px);
   color: #fff;
+  @include phones {
+    margin-top: rem(50px);
+    margin-left: rem(30px);
+  }
 }
 
 .menu-acco {

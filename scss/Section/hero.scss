@@ -17,15 +17,21 @@
 .hero__drops, .hero__text {
   flex-basis: 50%;
   display: flex;
-  @include tablets {
+  @include big-tablets {
     flex-basis: 100%;
     text-align: center;
   }
 }
-.hero__drops-img {
-  @include tablets {
-    text-align: right;
-    display: inline-block;
+.hero__drops {
+  @include big-tablets {
+    justify-content: center;
+  }
+
+  &-img {
+    @include phones {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 .hero__text {
@@ -39,6 +45,9 @@
   font-size: rem(65px);
   font-weight: 500;
   line-height: 1;
+  @include small-phones {
+    font-size: rem(45px);
+  }
 }
 
 .header__logo {
