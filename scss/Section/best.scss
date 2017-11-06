@@ -5,12 +5,14 @@
   background-size: cover;
   position: relative;
 
+
   &__cards {
     width: 100%;
     margin-top: 5%;
   }
 
   &__list {
+    margin-top: 2%;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
@@ -35,6 +37,7 @@
       display: block;
       font-size: rem(24px);
       font-family: Lifehack;
+      margin-top: rem(22px);
     }
     & p {
       font-size: rem(14px);
