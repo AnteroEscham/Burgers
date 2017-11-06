@@ -21,14 +21,29 @@
 .form__wrap {
   display: flex;
   flex-direction: row;
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
 }
 
 .form__left, .form__right {
   width: 50%;
+  @include tablets {
+    width: 100%;
+    padding: 0 rem(100px);
+  }
+  @include phones {
+    padding: 0;
+  }
 }
 
 .form__right {
   margin-left: rem(15px);
+  @include tablets {
+    margin-left: 0;
+  }
 }
 
 .form__block-title {
@@ -61,6 +76,9 @@
 
 .form__controls {
   margin-top: rem(10px);
+  @include phones {
+    margin: rem(10px) auto;
+  }
 }
 .form__control {
   display: inline-block;
@@ -117,6 +135,12 @@
   &:checked+.form__check-block {
     background: #fff url('../img/content/checkmark.png') center center no-repeat;
 
+  }
+}
+
+.form__row--center {
+  @include phones {
+    justify-content: center;
   }
 }
 

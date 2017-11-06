@@ -14,12 +14,23 @@
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+    @include phones {
+      flex-direction: column;
+    }
 
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    max-width: rem(299px);
+    max-width: 33%;
+    @include phones {
+      max-width: 100%;
+      flex-direction: row;
+      text-align: left;
+      margin-bottom: rem(20px);
+    }
     & span, h1, h2, h3, h4, h5, h6 {
       display: block;
       font-size: rem(24px);
@@ -33,8 +44,13 @@
 }
 
 .best__item-svg {
+  flex-shrink: 0;
+  align-self: center;
   width: rem(96px);
   height: rem(96px);
+  @include phones {
+    margin-right: rem(25px);
+  }
   &--meat {
     fill: $meat;
   }
@@ -45,7 +61,6 @@
     fill: $natural;
   }
 }
-
 
 
 .title--best {
