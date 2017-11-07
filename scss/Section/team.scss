@@ -1,0 +1,91 @@
+.team {
+  background-image: url('../img/bg/team-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.team__right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: rgba($dark, 0.9);
+  padding: rem(110px) rem(50px);
+  color: #fff;
+  @include tablets {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.team__item {
+  margin-top: rem(20px);
+  &:before {
+    content: "▼";
+    color: $yellow;
+    font-size: rem(10px);
+    margin-right: rem(5px);
+  }
+}
+
+//add style for js
+.team__item--active .team__name {
+  color: $yellow;
+}
+
+.team__item--active .team__about-name {
+  height: auto;
+  overflow: visible;
+
+}
+
+.team__item--active:before {
+  content: "▲";
+  color: $yellow;
+  font-size: rem(10px);
+  margin-right: rem(5px);
+}
+
+.team__name {
+  color: #fff;
+  font: rem(14px) Gagalin;
+  cursor: pointer;
+}
+
+.team__about-name {
+  display: flex;
+  margin-top: rem(15px);
+  height: 0;
+  overflow: hidden;
+  @include tablets {
+    flex-direction: column;
+    align-content: center;
+  }
+
+}
+
+.team__userpic {
+  width: rem(100px);
+  height: rem(100px);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #c3c3c3 url("../img/content/team-avatar.jpg") center center no-repeat;
+  background-size: cover;
+  margin-right: rem(20px);
+  flex-shrink: 0;
+
+  @include tablets {
+    align-self: center;
+    margin-right: 0;
+  }
+}
+
+.team__position {
+  font-weight: 500;
+}
+
+.title--team {
+  margin: 0 0 rem(75px) 0;
+}

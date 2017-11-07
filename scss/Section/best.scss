@@ -3,11 +3,8 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  &__title {
-    @extend .hero__title;
-    color: $dark;
-    margin-top: 2%;
-  }
+  position: relative;
+
 
   &__cards {
     width: 100%;
@@ -19,21 +16,56 @@
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+    @include phones {
+      flex-direction: column;
+    }
 
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    max-width: rem(299px);
-    &-title {
+    max-width: 33%;
+    @include phones {
+      max-width: 100%;
+      flex-direction: row;
+      text-align: left;
+      margin-bottom: rem(20px);
+    }
+    & span, h1, h2, h3, h4, h5, h6 {
       display: block;
       font-size: rem(24px);
       font-family: Lifehack;
       margin-top: rem(22px);
     }
-    &-desc {
+    & p {
       font-size: rem(14px);
       line-height: 1.9;
     }
   }
+}
+
+.best__item-svg {
+  flex-shrink: 0;
+  align-self: center;
+  width: rem(96px);
+  height: rem(96px);
+  @include phones {
+    margin-right: rem(25px);
+  }
+  &--meat {
+    fill: $meat;
+  }
+  &--hand {
+    fill: $hand;
+  }
+  &--natural {
+    fill: $natural;
+  }
+}
+
+
+.title--best {
+  color: $dark;
 }
