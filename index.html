@@ -9,6 +9,25 @@
 </head>
 <body>
   <div class="wrapper">
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu__logo">
+        <a href="#" class="logo">
+          <img src="./img/logo.svg" alt="logo-img logo-img--mobile" class="logo">
+        </a>
+      </div>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">О нас</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Бургеры</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Команда</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Меню</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Отзывы</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Контакты</a></li>
+      </ul>
+      <div class="burger-close" id="burger-close">
+        <div class="burger-close__left-row"></div>
+        <div class="burger-close__right-row"></div>
+      </div>
+    </div>
     <div class="main-content">
       <!-- SECTION HERO -->
       <section class="section hero">
@@ -33,7 +52,7 @@
             </div>
             <!-- NAVIGATION END -->
             <div class="hero__btn"><a href="#" class="btn">Заказать</a></div>
-            <div class="menu-burger">
+            <div class="menu-burger" id="menu-burger">
               <div class="menu-burger__row"></div>
               <div class="menu-burger__row"></div>
               <div class="menu-burger__row"></div>
@@ -397,5 +416,9 @@
        <!-- FIXED NAVIGATION END -->
     </div>
   </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="./js/burger-nav.js"></script>
+  <!-- JAVASCRIPT END -->
 </body>
 </html>
