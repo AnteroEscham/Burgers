@@ -812,6 +812,24 @@ h1, h2, h3, h4, h5, h6 {
 .title--best {
   color: #2f3234; }
 
+.burger-slider {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(50%, #eb8c38), color-stop(51%, #eb8c38), to(#f9b43b));
+  background: -webkit-linear-gradient(top, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
+  background: -o-linear-gradient(top, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
+  background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
+  position: relative; }
+
+.container--burger-slider {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  min-width: 1024px; }
+
+.burger-slider__left-arrow, .burger-slider__right-arrow {
+  height: 100%; }
+
 .reviews {
   position: relative;
   height: 1px; }

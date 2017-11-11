@@ -1,0 +1,17 @@
+.burger-slider {
+  background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#eb8c38 51%,#f9b43b 100%);
+  position: relative;
+}
+
+.container--burger-slider {
+  flex-direction: row;
+  min-width: 1024px;
+}
+
+.burger-slider__left-arrow, .burger-slider__right-arrow {
+  height: 100%;
+}
+
+.burger-slider__list {
+
+}
