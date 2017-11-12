@@ -6,6 +6,10 @@ html {
   @include phones {
     font-size: 14px;
   }
+  @include small-phones {
+    font-size: 11px;
+  }
+
 }
 
 body {
