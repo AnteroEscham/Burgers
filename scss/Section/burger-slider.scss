@@ -1,0 +1,251 @@
+.burger-slider {
+  background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#eb8c38 51%,#f9b43b 100%);
+  position: relative;
+  height: 1px;
+}
+
+.container--burger-slider {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1024px;
+}
+
+.burger-slider__item {
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+  }
+}
+.burger-slider__burger, .burger-slider__content {
+  width: 50%;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.burger-slider__burger {
+  position: relative;
+
+}
+
+.burger-slider__burger-thumb {
+  padding: 11% 0;
+  @include big-tablets {
+    padding-left: 10%;
+
+  }
+  @include tablets {
+    padding: 5% 0 0;
+    width: 80%;
+    margin: auto;
+  }
+  @include phones {
+    padding: 15% 0 0;
+  }
+  @include small-phones {
+    padding: 25% 0 0;
+  }
+
+}
+
+.burger-slider__burger-img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.burger-slider__ingredients {
+  width: rem(90px);
+  height: rem(90px);
+  background-color: #f08c33;
+  position: absolute;
+  border-radius: 4px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  &:hover:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 21.875rem;
+    min-height: 20.625rem;
+    left: 1.625rem;
+    top: 0;
+    z-index: 100;
+    cursor: text;
+
+  }
+  &:hover + .burger-slider__show-ing {
+    display: flex;
+  }
+}
+
+.burger-slider__show-ing {
+  width: rem(270px);
+  min-height: rem(330px);
+  background-color: rgba(#fff, 0.9);
+  border-radius: 3px;
+  position: absolute;
+  left: rem(92px);
+  padding: rem(20px);
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.burger-slider__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(5px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.burger-slider__show-desc {
+  font-weight: 500;
+}
+
+.burger-slider__show-svg {
+  &--beef {
+    fill: #e25028;
+    height: rem(50px);
+    width: rem(50px);
+  }
+  &--buns {
+    fill: #f8b43a;
+    height: rem(50px);
+    width: rem(50px);
+  }
+  &--salad {
+    fill: #8ac03e;
+    height: rem(50px);
+    width: rem(50px);
+  }
+  &--sauce {
+    fill: #e25028;
+    height: rem(50px);
+    width: rem(50px);
+  }
+  &--cucumber {
+    fill: #8ac03e;
+    height: rem(50px);
+    width: rem(50px);
+  }
+  &--cheese {
+    fill: #f8b43a;
+    height: rem(50px);
+    width: rem(50px);
+  }
+}
+
+
+.burger-slider__calories {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-family: Gagalin;
+  font-size: rem(14px);
+  text-align: center;
+  opacity: 0.6;
+  @include tablets {
+    right: 0;
+    top: 0;
+    bottom: auto;
+  }
+
+}
+
+.burger-slider__cal-quant {
+  font-size: rem(20px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.burger-slider__calories-svg {
+  fill: #fff;
+  width: rem(64px);
+  height: rem(64px);
+}
+
+.burger-slider__ing-svg {
+  fill: #fff;
+  width: rem(50px);
+  height: rem(50px);
+  display: block;
+  margin: rem(10px) auto rem(5px);
+}
+
+.burger-slider__ing-desc {
+  color: #fff;
+  font-family: Gagalin;
+  font-size: rem(14px);
+}
+
+.burger-slider__burger-img {
+  width: 100%;
+  height: 100%;
+}
+.burger-slider__left-arrow, .burger-slider__right-arrow {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-down-svg {
+  &--left {
+    transform-origin: center;
+    transform: rotate(90deg);
+  }
+  &--right {
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+
+}
+
+.burger-slider__list {
+  width: 100%;
+}
+
+.burger-slider__item {
+  display: flex;
+}
+
+.title--burger-slider {
+  color: #fff;
+  line-height: 1;
+  @include tablets {
+    font-size: rem(50px);
+  }
+}
+
+.burger-slider__desc {
+  color: #fff;
+  width: 90%;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.burger-slider__price {
+  font-family: Gagalin;
+  font-size: rem(29px);
+  color: $orange;
+}
+.burger-slider__cost {
+  font-size: rem(71px);
+}
+
+.burger-slider__btn {
+  display: inline-block;
+  margin-left: rem(15px);
+}
