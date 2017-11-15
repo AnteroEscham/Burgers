@@ -596,6 +596,9 @@ h1, h2, h3, h4, h5, h6 {
     left: -0.25rem;
     border-radius: 50%; }
 
+.lock {
+  overflow: hidden; }
+
 .header {
   width: 100%;
   display: -webkit-box;
