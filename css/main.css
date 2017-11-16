@@ -1207,10 +1207,6 @@ h1, h2, h3, h4, h5, h6 {
 .team__item--active .team__name {
   color: #f8b43a; }
 
-.team__item--active .team__about-name {
-  height: auto;
-  overflow: visible; }
-
 .team__item--active:before {
   content: "▲";
   color: #f8b43a;
@@ -1227,9 +1223,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0.9375rem;
-  height: 0;
-  overflow: hidden; }
+  margin-top: 0.9375rem; }
   @media screen and (max-width: 768px) {
     .team__about-name {
       -webkit-box-orient: vertical;
