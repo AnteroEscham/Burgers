@@ -12,6 +12,9 @@
 @import "Layout/base";
 @import "Layout/adjustment";
 
+//slick widget
+@import "slick";
+
 
 //section
 @import "Section/hero";
@@ -23,3 +26,5 @@
 @import "Section/form";
 @import "Section/contacts";
 @import "Section/mobile-menu";
+
+@import "slick-config";
