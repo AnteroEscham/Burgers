@@ -1,6 +1,6 @@
 .reviews {
   position: relative;
-  height: 1px;
+  height: 100vh;
 
   &__list {
     width: 100%;
@@ -71,5 +71,16 @@
 @each $nmb-guest in 1, 2, 3, 4, 5, 6, 7, 8 {
   .reviews__item--guest-#{$nmb-guest} {
     background-image: url('../img/content/guest-#{$nmb-guest}.png');
+  }
+}
+
+.reviews__popup {
+  display: none;
+  width: 40%;
+  min-height: rem(257px);
+  border-radius: 5px;
+  background-color: #fff;
+  @include tablets {
+    width: 80%;
   }
 }

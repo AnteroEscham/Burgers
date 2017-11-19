@@ -13,7 +13,10 @@
 @import "Layout/adjustment";
 
 //slick widget
-@import "slick";
+@import "vendor/slick";
+
+//fancybox widget
+@import "vendor/jquery.fancybox";
 
 
 //section
@@ -27,4 +30,4 @@
 @import "Section/contacts";
 @import "Section/mobile-menu";
 
-@import "slick-config";
+@import "vendor/vendor-config";
