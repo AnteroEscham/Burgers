@@ -12,6 +12,12 @@
 @import "Layout/base";
 @import "Layout/adjustment";
 
+//slick widget
+@import "vendor/slick";
+
+//fancybox widget
+@import "vendor/jquery.fancybox";
+
 
 //section
 @import "Section/hero";
@@ -23,3 +29,5 @@
 @import "Section/form";
 @import "Section/contacts";
 @import "Section/mobile-menu";
+
+@import "vendor/vendor-config";

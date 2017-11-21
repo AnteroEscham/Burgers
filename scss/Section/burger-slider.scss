@@ -1,7 +1,7 @@
 .burger-slider {
   background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#eb8c38 51%,#f9b43b 100%);
   position: relative;
-  height: 1px;
+  height: 100vh;
 }
 
 .container--burger-slider {
@@ -213,7 +213,7 @@
 }
 
 .burger-slider__list {
-  width: 100%;
+  width: 85%;
 }
 
 .burger-slider__item {
@@ -240,6 +240,8 @@
   font-family: Gagalin;
   font-size: rem(29px);
   color: $orange;
+  display: inline-block;
+
 }
 .burger-slider__cost {
   font-size: rem(71px);
