@@ -77,8 +77,8 @@
     background: rgba(47,50,52,.9);
     width: 0;
     overflow: hidden;
-    //opacity: 1;
     transition: 0.4s;
+
 }
 
 .menu-acco__content--active {
@@ -93,5 +93,8 @@
     padding: 3.75rem 1.875rem;
     width: 100%;
     line-height: 1.8;
+    @include phones {
+      font-size: rem(14px);
+    }
 
 }

@@ -469,17 +469,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden; }
 
 .main-content {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   top: 0%;
   -webkit-transition: top 1s;
   -o-transition: top 1s;
-  transition: top 1s; }
+  transition: top 1s;
+  will-change: top; }
 
 .container {
   max-width: 940px;
@@ -504,9 +505,8 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center; }
 
 .section {
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.31);
-  min-height: 650px; }
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.31); }
 
 .btn {
   min-width: 6.125rem;
@@ -588,16 +588,17 @@ h1, h2, h3, h4, h5, h6 {
     top: -0.625rem;
     left: -0.25rem;
     border-radius: 50%; }
-  .fix-nav__link--active:before {
-    content: "";
-    display: inline-block;
-    width: 0.875rem;
-    height: 0.875rem;
-    border: 1px solid #fff;
-    position: absolute;
-    top: -0.625rem;
-    left: -0.25rem;
-    border-radius: 50%; }
+
+.fix-nav__item--active .fix-nav__link:before {
+  content: "";
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1px solid #fff;
+  position: absolute;
+  top: -0.625rem;
+  left: -0.25rem;
+  border-radius: 50%; }
 
 .lock {
   overflow: hidden; }
@@ -1519,8 +1520,8 @@ li.fancybox-thumbs-loading {
 
 @media screen and (max-width: 480px) {
   .hero__drops-img {
-    width: 100%;
-    height: 100%; } }
+    width: 80%;
+    height: 80%; } }
 
 .hero__text {
   -webkit-box-orient: vertical;
@@ -1539,7 +1540,7 @@ li.fancybox-thumbs-loading {
   font-size: 4.0625rem;
   font-weight: 500;
   line-height: 1; }
-  @media screen and (max-width: 380px) {
+  @media screen and (max-width: 480px) {
     .hero__title-desc {
       font-size: 2.8125rem; } }
 
@@ -1931,7 +1932,7 @@ li.fancybox-thumbs-loading {
   transform: rotate(-90deg); }
 
 .burger-slider__list {
-  width: 90%; }
+  width: 85%; }
 
 .burger-slider__item {
   display: -webkit-box;
@@ -2233,6 +2234,9 @@ li.fancybox-thumbs-loading {
   padding: 3.75rem 1.875rem;
   width: 100%;
   line-height: 1.8; }
+  @media screen and (max-width: 480px) {
+    .menu-acco__text {
+      font-size: 0.875rem; } }
 
 .delivery {
   background: url("../img/bg/form-bg.jpg") center center no-repeat;
@@ -2240,7 +2244,10 @@ li.fancybox-thumbs-loading {
 
 .title--delivery {
   text-align: center;
-  margin: 5rem 0; }
+  margin: 1.25rem 0; }
+  @media screen and (max-width: 480px) {
+    .title--delivery {
+      margin: 0.625rem 0; } }
 
 .form {
   color: #fff;

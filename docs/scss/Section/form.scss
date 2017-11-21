@@ -5,7 +5,10 @@
 
 .title--delivery {
   text-align: center;
-  margin: rem(80px) 0;
+  margin: rem(20px) 0;
+  @include phones {
+    margin: rem(10px) 0;
+  }
 }
 
 .form {

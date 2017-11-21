@@ -1,15 +1,16 @@
 .wrapper {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
 .main-content {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   top: 0%;
   transition: top 1s;
+  will-change: top;
 }
 
 .container {
@@ -25,9 +26,9 @@
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0,0,0,0.31);
-  min-height: 650px;
+  // min-height: 650px;
 }
 
 .btn {
@@ -117,7 +118,10 @@
     left: rem(-4px);
     border-radius: 50%;
   }
-  &--active:before {
+
+}
+
+.fix-nav__item--active .fix-nav__link:before {
     content: "";
     display: inline-block;
     width: rem(14px);
@@ -128,7 +132,6 @@
     left: rem(-4px);
     border-radius: 50%;
   }
-}
 
 .lock {
   overflow: hidden;
