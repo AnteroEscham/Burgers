@@ -10,6 +10,7 @@
   position: relative;
   top: 0%;
   transition: top 1s;
+  will-change: top;
 }
 
 .container {
@@ -117,7 +118,10 @@
     left: rem(-4px);
     border-radius: 50%;
   }
-  &--active:before {
+
+}
+
+.fix-nav__item--active .fix-nav__link:before {
     content: "";
     display: inline-block;
     width: rem(14px);
@@ -128,7 +132,6 @@
     left: rem(-4px);
     border-radius: 50%;
   }
-}
 
 .lock {
   overflow: hidden;

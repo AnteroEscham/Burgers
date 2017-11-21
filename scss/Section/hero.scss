@@ -45,7 +45,7 @@
   font-size: rem(65px);
   font-weight: 500;
   line-height: 1;
-  @include small-phones {
+  @include phones {
     font-size: rem(45px);
   }
 }
