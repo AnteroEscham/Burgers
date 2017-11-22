@@ -1697,8 +1697,7 @@ li.fancybox-thumbs-loading {
   background: -webkit-linear-gradient(top, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
   background: -o-linear-gradient(top, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
   background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
-  position: relative;
-  height: 100vh; }
+  position: relative; }
 
 .container--burger-slider {
   -webkit-box-orient: horizontal;
@@ -1773,7 +1772,12 @@ li.fancybox-thumbs-loading {
   border-radius: 4px;
   text-align: center;
   display: block;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .burger-slider__ingredients:hover {
+    background-color: #e35028; }
   .burger-slider__ingredients:hover:after {
     content: '';
     display: block;
@@ -1782,8 +1786,7 @@ li.fancybox-thumbs-loading {
     min-height: 20.625rem;
     left: 1.625rem;
     top: 0;
-    z-index: 100;
-    cursor: text; }
+    z-index: 100; }
   .burger-slider__ingredients:hover + .burger-slider__show-ing {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1968,8 +1971,7 @@ li.fancybox-thumbs-loading {
   margin-left: 0.9375rem; }
 
 .reviews {
-  position: relative;
-  height: 100vh; }
+  position: relative; }
   .reviews__list {
     width: 100%;
     height: 100%;
@@ -2404,8 +2406,7 @@ li.fancybox-thumbs-loading {
     background-color: initial; }
 
 .contacts {
-  position: relative;
-  height: 100vh; }
+  position: relative; }
 
 .contacts__map {
   width: 100%;
