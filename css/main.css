@@ -437,10 +437,10 @@ html {
       font-size: 15px; } }
   @media screen and (max-width: 480px) {
     html {
-      font-size: 14px; } }
+      font-size: 13px; } }
   @media screen and (max-width: 380px) {
     html {
-      font-size: 11px; } }
+      font-size: 10px; } }
 
 body {
   margin: 0;
@@ -1520,8 +1520,8 @@ li.fancybox-thumbs-loading {
 
 @media screen and (max-width: 480px) {
   .hero__drops-img {
-    width: 80%;
-    height: 80%; } }
+    width: 60%;
+    height: 60%; } }
 
 .hero__text {
   -webkit-box-orient: vertical;
