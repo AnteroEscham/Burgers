@@ -412,7 +412,7 @@
          <div class="container">
            <div class="title title--delivery">Закажите доставку</div>
            <div class="form">
-             <form action="" class="form__elem">
+             <form id="form-delivery" class="form__elem">
                <div class="form__wrap">
                  <div class="form__left">
                    <div class="form__row">
@@ -480,7 +480,7 @@
                    </div>
                    <div class="form__row form__row--center">
                      <div class="form__btns">
-                       <a href="#" class="btn">Заказать</a>
+                       <button type="submit" class="btn btn--submit-delivery">Заказать</button>
                        <button class="btn btn--reset" type="reset" name="button">Очистить</button>
                      </div>
                    </div>
@@ -575,12 +575,12 @@
       </a>
     </div>
     <ul class="mobile-menu__list">
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="0">О нас</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="1">Бургеры</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="2">Команда</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="3">Меню</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="4">Отзывы</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="5">Контакты</a></li> data-scroll-to="1"
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="1">О нас</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="2">Бургеры</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="3">Команда</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="4">Меню</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="5">Отзывы</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="7">Контакты</a></li>
     </ul>
     <div class="burger-close" id="burger-close">
       <div class="burger-close__left-row"></div>
@@ -601,6 +601,7 @@
   <script src="./js/vertical-accordeon.js"></script>
   <script src="./js/horizon-acc.js"></script>
   <script src="./js/config-map.js"></script>
+  <script src="./js/ajax.js"></script>
   <!-- JAVASCRIPT END -->
 </body>
 </html>

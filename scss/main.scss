@@ -4,11 +4,11 @@
 @import "Config/variables";
 @import "Config/mixins";
 
-// base
-@import "Layout/fonts";
-
 //media
 @import "Config/media";
+
+// base
+@import "Layout/fonts";
 @import "Layout/base";
 @import "Layout/adjustment";
 

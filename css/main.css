@@ -2405,6 +2405,11 @@ li.fancybox-thumbs-loading {
     padding: 0;
     background-color: initial; }
 
+.btn--submit-delivery {
+  border: none;
+  text-transform: none;
+  cursor: pointer; }
+
 .contacts {
   position: relative; }
 
