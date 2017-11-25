@@ -312,6 +312,7 @@
 
         </section>
         <!-- SECTION EAT-MENU END-->
+
        <!-- SECTION REVIEWS -->
        <section class="section reviews">
          <ul class="reviews__list">
@@ -412,41 +413,41 @@
          <div class="container">
            <div class="title title--delivery">Закажите доставку</div>
            <div class="form">
-             <form id="form-delivery" class="form__elem">
+             <form id="form-delivery" action="./php/mail.php" class="form__elem">
                <div class="form__wrap">
                  <div class="form__left">
                    <div class="form__row">
                       <label class="form__block">
                          <div class="form__block-title">Имя</div>
-                         <input type="text" class="form__input">
+                         <input type="text" id="user-name" name="user-name" class="form__input">
                       </label>
                       <label class="form__block">
                          <div class="form__block-title">Телефон</div>
-                         <input type="text" class="form__input">
+                         <input type="text" id="user-phone" name="user-phone" class="form__input">
                       </label>
                    </div>
                    <div class="form__row">
                      <label class="form__block">
                        <div class="form__block-title">Улица</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-street" name="user-street" class="form__input">
                      </label>
                    </div>
                    <div class="form__row">
                      <label class="form__block">
                        <div class="form__block-title">Дом</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-home" name="user-home" class="form__input">
                      </label>
                      <label class="form__block">
                        <div class="form__block-title">Корпус</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-corp" name="user-corp" class="form__input">
                      </label>
                      <label class="form__block">
                        <div class="form__block-title">Квартира</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-apart" name="user-apart" class="form__input">
                      </label>
                      <label class="form__block">
                        <div class="form__block-title">Этаж</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-floor" name="user-floor" class="form__input">
                      </label>
                    </div>
                  </div>
@@ -454,27 +455,27 @@
                    <div class="from__row">
                      <label class="form__block">
                        <div class="form__block-title">Комментарий</div>
-                       <textarea class="form__textarea"></textarea>
+                       <textarea id="user-comment" name="user-comment" class="form__textarea"></textarea>
                      </label>
                    </div>
                    <div class="form__row">
                      <div class="form__controls">
                        <div class="form__control">
-                         <input name="radio" id="radio-1" type="radio" class="form__radio">
-                         <label for="radio-1" class="form__block-radio"></label>
+                         <input name="user-pay" id="pay-cash" type="radio" class="form__radio">
+                         <label for="pay-cash" class="form__block-radio"></label>
                          <span class="form__radio-title">Потребуется сдача</span>
                        </div>
                        <div class="form__control">
-                         <input name="radio" id="radio-2" type="radio" class="form__radio">
-                         <label for="radio-2" class="form__block-radio"></label>
+                         <input name="user-pay" id="pay-card" type="radio" class="form__radio">
+                         <label for="pay-card" class="form__block-radio"></label>
                          <span class="form__radio-title">Оплата по карте</span>
                        </div>
 
                      </div>
                    </div>
                    <div class="form__row form__row--center">
-                     <input id="form__checkbox" type="checkbox" class="form__checkbox">
-                     <label for="form__checkbox" class="form__check-block"></label>
+                     <input id="dont-disturb" name="dont-disturb" value="1" type="checkbox" class="form__checkbox">
+                     <label for="dont-disturb" class="form__check-block"></label>
                      <span class="form__check-title">Не перезванивать</span>
 
                    </div>
@@ -489,6 +490,13 @@
              </form>
            </div>
          </div>
+
+         <!-- DROP MESSAGE -->
+         <div class="delivery__overlay"></div>
+         <div class="delivery__show-message">
+           <a href="#" class="btn btn--delivery-show">Закрыть</a>
+         </div>
+         <!-- DROP MESSAGE END-->
        </section>
        <!-- SECTION DELIVERY END -->
 
