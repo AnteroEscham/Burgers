@@ -2318,18 +2318,18 @@ li.fancybox-thumbs-loading {
     margin-right: 0; }
 
 .form__input {
-  outline: none;
   border: none;
   border-radius: 3px;
   width: 100%;
-  padding: 5px; }
+  padding: 5px;
+  outline-color: #f8b43a; }
 
 .form__textarea {
   border-radius: 3px;
   width: 100%;
   resize: none;
   height: 6.75rem;
-  outline: none; }
+  outline-color: #f8b43a; }
 
 .form__controls {
   margin-top: 0.625rem; }
@@ -2400,7 +2400,6 @@ li.fancybox-thumbs-loading {
   text-transform: initial;
   background-color: initial;
   padding: 0;
-  outline: none;
   cursor: pointer; }
   .btn--reset:hover {
     padding: 0;

@@ -63,11 +63,11 @@
 }
 
 .form__input {
-  outline: none;
   border: none;
   border-radius: 3px;
   width: 100%;
   padding: 5px;
+  outline-color: $yellow;
 }
 
 .form__textarea {
@@ -75,7 +75,7 @@
   width: 100%;
   resize: none;
   height: rem(108px);
-  outline: none;
+  outline-color: $yellow;
 }
 
 .form__controls {
@@ -153,7 +153,6 @@
   text-transform: initial;
   background-color: initial;
   padding: 0;
-  outline: none;
   cursor: pointer;
   &:hover {
     padding: 0;
