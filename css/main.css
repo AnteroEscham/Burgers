@@ -437,10 +437,10 @@ html {
       font-size: 15px; } }
   @media screen and (max-width: 480px) {
     html {
-      font-size: 14px; } }
+      font-size: 13px; } }
   @media screen and (max-width: 380px) {
     html {
-      font-size: 11px; } }
+      font-size: 10px; } }
 
 body {
   margin: 0;
@@ -1521,8 +1521,8 @@ li.fancybox-thumbs-loading {
 
 @media screen and (max-width: 480px) {
   .hero__drops-img {
-    width: 80%;
-    height: 80%; } }
+    width: 60%;
+    height: 60%; } }
 
 .hero__text {
   -webkit-box-orient: vertical;
@@ -1704,8 +1704,7 @@ li.fancybox-thumbs-loading {
   background: -webkit-linear-gradient(top, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
   background: -o-linear-gradient(top, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
   background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 50%, #eb8c38 51%, #f9b43b 100%);
-  position: relative;
-  height: 100vh; }
+  position: relative; }
 
 .container--burger-slider {
   -webkit-box-orient: horizontal;
@@ -1780,7 +1779,12 @@ li.fancybox-thumbs-loading {
   border-radius: 4px;
   text-align: center;
   display: block;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .burger-slider__ingredients:hover {
+    background-color: #e35028; }
   .burger-slider__ingredients:hover:after {
     content: '';
     display: block;
@@ -1789,8 +1793,7 @@ li.fancybox-thumbs-loading {
     min-height: 20.625rem;
     left: 1.625rem;
     top: 0;
-    z-index: 100;
-    cursor: text; }
+    z-index: 100; }
   .burger-slider__ingredients:hover + .burger-slider__show-ing {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1975,8 +1978,7 @@ li.fancybox-thumbs-loading {
   margin-left: 0.9375rem; }
 
 .reviews {
-  position: relative;
-  height: 100vh; }
+  position: relative; }
   .reviews__list {
     width: 100%;
     height: 100%;
@@ -2247,7 +2249,8 @@ li.fancybox-thumbs-loading {
 
 .delivery {
   background: url("../img/bg/form-bg.jpg") center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
 
 .title--delivery {
   text-align: center;
@@ -2322,18 +2325,18 @@ li.fancybox-thumbs-loading {
     margin-right: 0; }
 
 .form__input {
-  outline: none;
   border: none;
   border-radius: 3px;
   width: 100%;
-  padding: 5px; }
+  padding: 5px;
+  outline-color: #f8b43a; }
 
 .form__textarea {
   border-radius: 3px;
   width: 100%;
   resize: none;
   height: 6.75rem;
-  outline: none; }
+  outline-color: #f8b43a; }
 
 .form__controls {
   margin-top: 0.625rem; }
@@ -2362,6 +2365,8 @@ li.fancybox-thumbs-loading {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
+  .form__radio:focus + .form__block-radio {
+    outline: #3b99fc auto 5px; }
 
 .form__radio-title {
   display: inline-block;
@@ -2391,6 +2396,8 @@ li.fancybox-thumbs-loading {
   visibility: hidden; }
   .form__checkbox:checked + .form__check-block {
     background: #fff url("../img/content/checkmark.png") center center no-repeat; }
+  .form__checkbox:focus + .form__check-block {
+    outline: #3b99fc auto 5px; }
 
 @media screen and (max-width: 480px) {
   .form__row--center {
@@ -2404,15 +2411,53 @@ li.fancybox-thumbs-loading {
   text-transform: initial;
   background-color: initial;
   padding: 0;
-  outline: none;
   cursor: pointer; }
   .btn--reset:hover {
     padding: 0;
     background-color: initial; }
 
+.btn--submit-delivery {
+  border: none;
+  text-transform: none;
+  cursor: pointer; }
+
+.btn--delivery-show {
+  display: inline-block; }
+
+.delivery__show-message {
+  text-align: center;
+  padding: 0.625rem;
+  width: 30%;
+  min-height: 7.5rem;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 4px -1px 29px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px -1px 29px -2px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 30; }
+  @media screen and (max-width: 768px) {
+    .delivery__show-message {
+      width: 40%; } }
+  @media screen and (max-width: 480px) {
+    .delivery__show-message {
+      width: 60%; } }
+
+.delivery__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none; }
+
 .contacts {
-  position: relative;
-  height: 100vh; }
+  position: relative; }
 
 .contacts__map {
   width: 100%;
@@ -2581,5 +2626,3 @@ li.fancybox-thumbs-loading {
 .fancybox-close-small:after {
   color: #ec8468;
   font-size: 2.5rem; }
-
-/*# sourceMappingURL=main.css.map */

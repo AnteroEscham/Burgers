@@ -1,6 +1,7 @@
 .delivery {
   background: url('../img/bg/form-bg.jpg') center center no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .title--delivery {
@@ -62,11 +63,11 @@
 }
 
 .form__input {
-  outline: none;
   border: none;
   border-radius: 3px;
   width: 100%;
   padding: 5px;
+  outline-color: $yellow;
 }
 
 .form__textarea {
@@ -74,7 +75,7 @@
   width: 100%;
   resize: none;
   height: rem(108px);
-  outline: none;
+  outline-color: $yellow;
 }
 
 .form__controls {
@@ -104,6 +105,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  &:focus + .form__block-radio {
+      outline: rgb(59, 153, 252) auto 5px;
+  }
 }
 
 .form__radio-title {
@@ -120,6 +125,7 @@
   position: relative;
   vertical-align: middle;
   margin-right: rem(10px);
+
 }
 
 .form__check-block {
@@ -139,6 +145,9 @@
     background: #fff url('../img/content/checkmark.png') center center no-repeat;
 
   }
+  &:focus + .form__check-block {
+      outline: rgb(59, 153, 252) auto 5px;
+  }
 }
 
 .form__row--center {
@@ -152,10 +161,54 @@
   text-transform: initial;
   background-color: initial;
   padding: 0;
-  outline: none;
   cursor: pointer;
   &:hover {
     padding: 0;
     background-color: initial;
   }
+}
+
+.btn--submit-delivery {
+  border: none;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.btn--delivery-show {
+  display: inline-block;
+
+}
+
+.delivery__show-message {
+  text-align: center;
+  padding: rem(10px);
+  width: 30%;
+  min-height: rem(120px);
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px -1px 29px -2px rgba(#000, 0.5);
+  display: none;
+  z-index: 30;
+
+  @include tablets {
+    width: 40%;
+  }
+  @include phones {
+    width: 60%;
+  }
+
+}
+
+.delivery__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+
 }

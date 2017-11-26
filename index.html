@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
   <title>Burgers</title>
+  <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
   <script src="./js/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 </head>
@@ -311,6 +312,7 @@
 
         </section>
         <!-- SECTION EAT-MENU END-->
+
        <!-- SECTION REVIEWS -->
        <section class="section reviews">
          <ul class="reviews__list">
@@ -411,41 +413,41 @@
          <div class="container">
            <div class="title title--delivery">Закажите доставку</div>
            <div class="form">
-             <form action="" class="form__elem">
+             <form id="form-delivery" action="./php/mail.php" class="form__elem">
                <div class="form__wrap">
                  <div class="form__left">
                    <div class="form__row">
                       <label class="form__block">
                          <div class="form__block-title">Имя</div>
-                         <input type="text" class="form__input">
+                         <input type="text" id="user-name" name="user-name" class="form__input">
                       </label>
                       <label class="form__block">
                          <div class="form__block-title">Телефон</div>
-                         <input type="text" class="form__input">
+                         <input type="text" id="user-phone" name="user-phone" class="form__input">
                       </label>
                    </div>
                    <div class="form__row">
                      <label class="form__block">
                        <div class="form__block-title">Улица</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-street" name="user-street" class="form__input">
                      </label>
                    </div>
                    <div class="form__row">
                      <label class="form__block">
                        <div class="form__block-title">Дом</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-home" name="user-home" class="form__input">
                      </label>
                      <label class="form__block">
                        <div class="form__block-title">Корпус</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-corp" name="user-corp" class="form__input">
                      </label>
                      <label class="form__block">
                        <div class="form__block-title">Квартира</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-apart" name="user-apart" class="form__input">
                      </label>
                      <label class="form__block">
                        <div class="form__block-title">Этаж</div>
-                       <input type="text" class="form__input">
+                       <input type="text" id="user-floor" name="user-floor" class="form__input">
                      </label>
                    </div>
                  </div>
@@ -453,33 +455,33 @@
                    <div class="from__row">
                      <label class="form__block">
                        <div class="form__block-title">Комментарий</div>
-                       <textarea class="form__textarea"></textarea>
+                       <textarea id="user-comment" name="user-comment" class="form__textarea"></textarea>
                      </label>
                    </div>
                    <div class="form__row">
                      <div class="form__controls">
                        <div class="form__control">
-                         <input name="radio" id="radio-1" type="radio" class="form__radio">
-                         <label for="radio-1" class="form__block-radio"></label>
+                         <input name="user-pay" id="pay-cash" type="radio" class="form__radio">
+                         <label for="pay-cash" tabindex="0" class="form__block-radio"></label>
                          <span class="form__radio-title">Потребуется сдача</span>
                        </div>
                        <div class="form__control">
-                         <input name="radio" id="radio-2" type="radio" class="form__radio">
-                         <label for="radio-2" class="form__block-radio"></label>
+                         <input name="user-pay" id="pay-card" type="radio" class="form__radio">
+                         <label for="pay-card" tabindex="0" class="form__block-radio"></label>
                          <span class="form__radio-title">Оплата по карте</span>
                        </div>
 
                      </div>
                    </div>
                    <div class="form__row form__row--center">
-                     <input id="form__checkbox" type="checkbox" class="form__checkbox">
-                     <label for="form__checkbox" class="form__check-block"></label>
+                     <input id="dont-disturb" name="dont-disturb"  value="1" type="checkbox" class="form__checkbox">
+                     <label for="dont-disturb" tabindex="0" class="form__check-block"></label>
                      <span class="form__check-title">Не перезванивать</span>
 
                    </div>
                    <div class="form__row form__row--center">
                      <div class="form__btns">
-                       <a href="#" class="btn">Заказать</a>
+                       <button type="submit" class="btn btn--submit-delivery">Заказать</button>
                        <button class="btn btn--reset" type="reset" name="button">Очистить</button>
                      </div>
                    </div>
@@ -488,12 +490,19 @@
              </form>
            </div>
          </div>
+
+         <!-- DROP MESSAGE -->
+         <div class="delivery__overlay"></div>
+         <div class="delivery__show-message">
+           <a href="#" class="btn btn--delivery-show">Закрыть</a>
+         </div>
+         <!-- DROP MESSAGE END-->
        </section>
        <!-- SECTION DELIVERY END -->
 
        <!-- SECTION CONTACTS -->
         <section class="section contacts">
-          <div class="contacts__map"></div>
+          <div class="contacts__map" id="map"></div>
           <footer class="footer">
             <div class="container container--footer">
               <div class="footer__left">
@@ -574,12 +583,12 @@
       </a>
     </div>
     <ul class="mobile-menu__list">
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="0">О нас</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="1">Бургеры</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="2">Команда</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="3">Меню</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="4">Отзывы</a></li>
-      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="5">Контакты</a></li> data-scroll-to="1"
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="1">О нас</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="2">Бургеры</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="3">Команда</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="4">Меню</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="5">Отзывы</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" data-scroll-to="7">Контакты</a></li>
     </ul>
     <div class="burger-close" id="burger-close">
       <div class="burger-close__left-row"></div>
@@ -599,6 +608,8 @@
   <script src="./js/burger-nav.js"></script>
   <script src="./js/vertical-accordeon.js"></script>
   <script src="./js/horizon-acc.js"></script>
+  <script src="./js/config-map.js"></script>
+  <script src="./js/ajax.js"></script>
   <!-- JAVASCRIPT END -->
 </body>
 </html>
