@@ -105,6 +105,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  &:focus + .form__block-radio {
+      outline: rgb(59, 153, 252) auto 5px;
+  }
 }
 
 .form__radio-title {
@@ -121,6 +125,7 @@
   position: relative;
   vertical-align: middle;
   margin-right: rem(10px);
+
 }
 
 .form__check-block {
@@ -139,6 +144,9 @@
   &:checked+.form__check-block {
     background: #fff url('../img/content/checkmark.png') center center no-repeat;
 
+  }
+  &:focus + .form__check-block {
+      outline: rgb(59, 153, 252) auto 5px;
   }
 }
 

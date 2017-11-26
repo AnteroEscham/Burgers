@@ -2358,6 +2358,8 @@ li.fancybox-thumbs-loading {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
+  .form__radio:focus + .form__block-radio {
+    outline: #3b99fc auto 5px; }
 
 .form__radio-title {
   display: inline-block;
@@ -2387,6 +2389,8 @@ li.fancybox-thumbs-loading {
   visibility: hidden; }
   .form__checkbox:checked + .form__check-block {
     background: #fff url("../img/content/checkmark.png") center center no-repeat; }
+  .form__checkbox:focus + .form__check-block {
+    outline: #3b99fc auto 5px; }
 
 @media screen and (max-width: 480px) {
   .form__row--center {
