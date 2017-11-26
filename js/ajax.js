@@ -27,21 +27,26 @@ $(function () {
     })
 
     request.done(function(msg) {
-        var mes = msg.mes,
-            status = msg.status;
-        if (status === 'OK') {
+        if($('#form-delivery').valid()) {
+          var mes = msg.mes,
+              status = msg.status;
+          if (status === 'OK') {
 
-          fadeBox('Сообщение отправлено');
-        } else {
+            fadeBox('Сообщение отправлено');
+            $('#form-delivery')[0].reset();
+          } else {
 
-          fadeBox('Не удалось отправить сообщение. Попробуйте позже');
+            fadeBox('Не удалось отправить сообщение. Попробуйте позже');
 
+          }
         }
     });
 
     request.fail ((jqXHL, textstatus) => {
 
-      fadeBox('Соединение прервано');
+      if($('#form-delivery').valid()) {
+        fadeBox('Соединение прервано');
+      }
     })
 
   })
