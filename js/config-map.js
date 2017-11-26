@@ -30,4 +30,5 @@ ymaps.ready(init);
 
       myCollection.add(myPlacemark1).add(myPlacemark2).add(myPlacemark3);
       myMap.geoObjects.add(myCollection);
+      myMap.controls.add('zoomControl');
     }
