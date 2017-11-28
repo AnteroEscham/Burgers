@@ -1,0 +1,113 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(10px);
+}
+
+.hero {
+  background-image: url('../img/bg/hero_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.hero__drops, .hero__text {
+  flex-basis: 50%;
+  display: flex;
+  @include big-tablets {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+.hero__drops {
+  @include big-tablets {
+    justify-content: center;
+  }
+
+  &-img {
+    @include phones {
+      width: 60%;
+      height: 60%;
+    }
+  }
+}
+.hero__text {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title-desc {
+  color: #ffffff;
+  font-family: 'Lifehack';
+  font-size: rem(65px);
+  font-weight: 500;
+  line-height: 1;
+  @include phones {
+    font-size: rem(45px);
+  }
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.nav {
+  margin-right: rem(15px);
+  @include tablets {
+    display: none;
+  }
+}
+
+.nav__item {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: ' ';
+    @include circle(5px, #fff);
+    margin: 0 12px;
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.nav__link {
+  color: #ffffff;
+  font-size: rem(13px);
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.hero__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: 10%;
+}
+
+.title--hero {
+  margin: 0;
+  padding-top: rem(60px);
+}
+
+.arrow-down-svg {
+  fill: #fff;
+  width: rem(30px);
+  height: rem(20px);
+}
