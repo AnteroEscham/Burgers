@@ -1,7 +1,9 @@
 .reviews {
+  position: relative;
 
   &__list {
     width: 100%;
+    height: 100%;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -10,13 +12,21 @@
   }
 
   &__item {
-    flex-basis: 25%;
-    height: 326px;
+    width: 25%;
+    height: 50%;
     background: url('../img/content/guest-1.png') no-repeat;
-    background-size: 100%;
-    padding: rem(48px) rem(24px);
+    background-position: center center;
+    background-size: cover;
+    padding: rem(48px) rem(17px);
     color: #fff;
     font-size: rem(14px);
+    @include tablets {
+      width: 50%;
+      height: 25%;
+      text-align: center;
+      padding: rem(10px) rem(10px);
+
+    }
 
 
     &:hover .reviews__content {
@@ -27,6 +37,9 @@
   &__content {
     opacity: 0;
     transition: 0.7s;
+    @include phones {
+      display: none;
+    }
   }
 
   &__name {
@@ -36,12 +49,19 @@
   }
 
   &__text {
-    line-height: 1.9;
+    line-height: 1.3;
+    @include tablets {
+      line-height: 1.3;
+      margin: rem(5px);
+    }
   }
 }
 
 .btn--reviews {
   background-color: $dark;
+  @include tablets {
+    padding: rem(5px) rem(8px);
+  }
   &:hover {
     background-color: lighten($dark, 7%);
   }
@@ -50,5 +70,16 @@
 @each $nmb-guest in 1, 2, 3, 4, 5, 6, 7, 8 {
   .reviews__item--guest-#{$nmb-guest} {
     background-image: url('../img/content/guest-#{$nmb-guest}.png');
+  }
+}
+
+.reviews__popup {
+  display: none;
+  width: 40%;
+  min-height: rem(257px);
+  border-radius: 5px;
+  background-color: #fff;
+  @include tablets {
+    width: 80%;
   }
 }
